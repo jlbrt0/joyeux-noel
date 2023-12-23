@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html id="color">
+	<head>
+		<meta charset='utf-8'>
+		<title>JOYEUX NOEL !</title>
+		<link rel='stylesheet' type='text/css' media='screen' href='mainstyle.css'>
+		<link rel='stylesheet' type='text/css' media='screen' href='choicepagestyle.css'>
+		<link rel="icon" href="ressources/icon.png"> 
+	</head>
+<body>
+	<div class="grain"></div>
+	<div class="portraitContent">
+        <header>
+            <h1>Pour Noël</h1>
+            <h2>Tu as le choix entre <span id="spanHeader">3 cadeaux.</span> Clique sur le coeur ♥ Quand tu as fait ton choix.</h2>
+            <span id="spanHeader2">Choisi bien !</span>
+        </header>
+        <div class="Banderole1" id="Band">
+            <div>
+                <span>Ho ! Ho ! Merry Xmas ! </span>
+                <span>Ho ! Ho ! Merry Xmas ! </span>
+            </div>
+        </div>
+        <div class="cadeau">
+            <h1>Zelda - BOTW</h1>
+            <div>
+                <img src="ressources/zelda.jpg" class="img1">
+                <a href="fin.html" id="choix1">
+                    <img src="ressources/choicetext.svg" class="choixImage">
+                </a>
+            </div>
+        </div>
+        <div class="Banderole2" id="Band">
+            <div>
+                <span>Ho ! Ho ! Merry Xmas ! </span>
+                <span>Ho ! Ho ! Merry Xmas ! </span>
+            </div>
+        </div>
+        <div class="cadeau">
+            <h1>1 mois Canal +</h1>
+            <div>
+                <img src="ressources/logo.png" class="img2">
+                <a href="fin.html" id="choix2">
+                    <img src="ressources/choicetext.svg" class="choixImage">
+                </a>
+            </div>
+        </div>
+        <div class="Banderole1" id="Band">
+            <div>
+                <span>Ho ! Ho ! Merry Xmas ! </span>
+                <span>Ho ! Ho ! Merry Xmas ! </span>
+            </div>
+        </div>
+        <div class="cadeau">
+            <h1>Poster de Nujaes</h1>
+            <div>
+                <img src="ressources/nujabes.png" class="img3">
+                <a href="fin.html" id="choix3">
+                    <img src="ressources/choicetext.svg" class="choixImage">
+                </a>
+            </div>
+        </div>
+        <!-- <div id="TEST">CLIQUER</div> -->
+    </div>
+	<div class="landscapeContent">
+		<h1> RETOURNE TON PORTABLE !</h1>
+		<img src="ressources/ScreenOrientationIcon-removebg-preview.png" alt="">
+	</div>
+</body>
+<script>
+	document.getElementById("choix1").addEventListener('click',function(e){;
+        document.cookie = 'choix=z'
+	});
+    document.getElementById("choix2").addEventListener('click',function(e){;
+        document.cookie = 'choix=c'
+	});
+    document.getElementById("choix3").addEventListener('click',function(e){;
+        document.cookie = 'choix=n'
+	});
+    var testb = document.getElementById("TEST");
+    testb.addEventListener('click', function(e){;
+        alert(document.cookie)
+    });
+</script>

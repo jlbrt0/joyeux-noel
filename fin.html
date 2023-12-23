@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html id="color">
+	<head>
+		<meta charset='utf-8'>
+		<title>JOYEUX NOEL !</title>
+		<link rel='stylesheet' type='text/css' media='screen' href='mainstyle.css'>
+		<link rel='stylesheet' type='text/css' media='screen' href='finpagestyle.css'>
+		<link rel="icon" href="ressources/icon.png"> 
+	</head>
+<body>
+	<div class="grain"></div>
+	<div class="portraitContent">
+        <div class="titre">
+			<h1><span>Cadeau validé !</span></h1>
+			<h2>Tu as encore le temps de le changer, mais dépèche toi </h2>
+		</div>
+		<div class="timer">
+			<div class="1" id="square">
+				<img src="ressources/star3.svg" id="rond">
+				<div class="block">
+					<div id="heures"></div>
+					<p>HEURES</p>
+				</div>
+				<img src="ressources/star3.svg" id="rond">
+			</div>
+			<div class="2" id="square">
+				<img src="ressources/star3.svg" id="rond">
+				<div class="block">
+					<div id="minutes"></div>
+					<p>MINUTES</p>
+				</div>
+				<img src="ressources/star3.svg" id="rond">
+			</div>
+			<div class="3" id="square">
+				<img src="ressources/star3.svg" id="rond">
+				<div class="block">
+					<div id="secondes"></div>
+					<p>SECONDES</p>
+				</div>
+				<img src="ressources/star3.svg" id="rond">
+			</div>
+		</div>
+    </div>
+	<div class="landscapeContent">
+		<h1> RETOURNE TON PORTABLE !</h1>
+		<img src="ressources/ScreenOrientationIcon-removebg-preview.png" alt="">
+	</div>
+</body>
+<script>
+	// Set the date we're counting down to
+	var countDownDate = new Date("Dec 25, 2024 00:00:00").getTime();
+	
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+	
+	  // Get today's date and time
+	  var now = new Date().getTime();
+	
+	  // Find the distance between now and the count down date
+	  var distance = countDownDate - now;
+	
+	  // Time calculations for days, hours, minutes and seconds
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	
+	  // Display the result in the element with id="demo"
+	  document.getElementById("heures").innerHTML = hours
+	  document.getElementById("minutes").innerHTML = minutes
+	  document.getElementById("secondes").innerHTML = seconds
+	
+	  // If the count down is finished, write some text
+	  if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("timer").innerHTML = "EXPIRED";
+	  }
+	}, 1000);
+</script>

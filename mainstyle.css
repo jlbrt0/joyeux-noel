@@ -1,0 +1,121 @@
+/*-------------Paramètres généreaux-------------*/
+
+/*VARIABLE ET ANIMATIONS*/
+
+@font-face {
+	font-family: MonumentExtended-Regular;
+	src: url(ressources/fonts/MonumentExtended/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+	font-family: MonumentExtended-Bold;
+	src: url(ressources/fonts/MonumentExtended/MonumentExtended-Ultrabold.otf);
+}
+
+@font-face {
+	font-family: NeueMetana;
+	src: url(ressources/fonts/NeueMetana-Regular/neuemetananext-semibold.otf);
+}
+
+@font-face {
+	font-family: Coolvetica;
+	src: url(ressources/fonts/Coolvetica/coolvetica-rg.otf);
+}
+
+@font-face {
+	font-family: Vogue;
+	src: url(ressources/fonts/Voge/Vogue.ttf);
+}
+
+@font-face {
+	font-family: DX-Rigraf;
+	src: url(ressources/fonts/DX-Rigraf/DXRigraf-SemiBoldExpanded.otf);
+}
+
+@keyframes spin{
+	0%{
+		-webkit-transform: rotate3d(0, 0, 1, 0deg);
+		transform: rotate3d(0, 0, 1, 0deg);
+	}
+
+	100%{
+		-webkit-transform: rotate3d(0, 0, 1, 360deg);
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+}  
+
+#color{
+    --couleur-ecriture: #ffffff;
+    --couleur-fond: #090C08;
+	--couleur-1: #119DA4;
+	--couleur-2: #6E44FF;
+}
+
+/*PARAMETRES CORPS DU SITE*/
+
+html{
+	scroll-behavior: smooth;
+}
+
+
+body{
+	background-color: var(--couleur-fond);
+	font-family: 'MonumentExtended-Regular';
+	color: var(--couleur-ecriture);
+	padding: 0;
+	margin: 0;
+}
+
+.grain{
+	/* background-color: #454ade; */
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.3;
+	position: fixed;
+	z-index: 999;
+	pointer-events: none;
+	background-image: url("ressources/noise.png");
+}
+
+.landscapeContent{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.landscapeContent img{
+	height: 15rem;
+}
+
+.landscapeContent h1{
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+a:active{
+	-webkit-tap-highlight-color: transparent;
+}
+
+@media only screen and (orientation:portrait){
+	.landscapeContent{
+		visibility: hidden;
+	}
+	.portraitContent{
+		visibility: visible;
+	}
+}
+
+@media only screen and (orientation:landscape){
+	.landscapeContent{
+		visibility: visible;
+	}
+	.portraitContent{
+		visibility: hidden;
+	}
+}

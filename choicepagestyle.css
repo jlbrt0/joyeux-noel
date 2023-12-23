@@ -1,0 +1,124 @@
+
+
+@keyframes marquee {
+	0% { left: 0; }
+	100% { left: -100%; }
+}
+
+body{
+    background-image: url(ressources/atome.svg);
+    background-position: 40rem 10rem;
+    background-size: 30rem;
+    background-repeat: no-repeat;
+}
+
+header{
+    padding: 3rem;
+    margin-bottom: 10rem;
+}
+
+header h1{
+    font-size: 7vh;
+    font-family: "NeueMetana";
+    margin: 0;
+}
+
+header h2{
+    margin: 0 0 5rem 0;
+    width: 33rem;
+    font-size: 2rem;
+}
+
+#spanHeader{
+    color: var(--couleur-2);
+}
+
+#spanHeader2{
+    color: var(--couleur-fond);
+    background-color: var(--couleur-ecriture);
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+h2 img{
+    height: 3rem;
+}
+
+.Banderole1{
+    rotate: 4deg;
+    background-color: var(--couleur-1);
+}
+
+.Banderole2{
+    rotate: -4deg;
+    background-color: var(--couleur-1);
+}
+
+#Band{
+    height: 5rem;
+    width: 100%;
+    color: var(--couleur-fond);
+    font-family: 'MonumentExtended-Bold';
+    font-size: 4rem;
+    
+    overflow: hidden;
+    position: relative;
+    margin-bottom: -0.5rem;
+}
+  
+#Band div {
+	display: block;
+	width: 200%;
+	height: 5rem;
+  
+	position: absolute;
+	overflow: hidden;
+  
+	animation: marquee 10s linear infinite;
+}
+  
+#Band span {
+	float: left;
+	width: 50%;
+}
+
+.img1{
+    height: 35rem;
+    border-radius: 50px;
+}
+
+.img2{
+    height: 25rem;
+    border-radius: 50px;
+}
+
+.img3{
+    height: 30rem;
+    border-radius: 50px;
+}
+
+.cadeau h1{
+    font-size: 4rem;
+    font-family: 'MonumentExtended-Regular';
+    letter-spacing: 0.3rem;
+    margin-bottom: 4rem;
+}
+
+.cadeau{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 7rem 3rem 7rem 3rem;
+}
+
+.cadeau div{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.choixImage{
+    height: 22rem;
+    /* animation: spin 10s ease-in-out infinite 2s; */
+}
