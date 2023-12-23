@@ -16,28 +16,28 @@
 		</div>
 		<div class="timer">
 			<div class="1" id="square">
-				<img src="ressources/star3.svg" id="rond">
+				<img src="ressources/star3.svg" class="rond">
 				<div class="block">
 					<div id="heures"></div>
 					<p>HEURES</p>
 				</div>
-				<img src="ressources/star3.svg" id="rond">
+				<img src="ressources/star3.svg" class="rond">
 			</div>
 			<div class="2" id="square">
-				<img src="ressources/star3.svg" id="rond">
+				<img src="ressources/star3.svg" class="rond">
 				<div class="block">
 					<div id="minutes"></div>
 					<p>MINUTES</p>
 				</div>
-				<img src="ressources/star3.svg" id="rond">
+				<img src="ressources/star3.svg" class="rond">
 			</div>
 			<div class="3" id="square">
-				<img src="ressources/star3.svg" id="rond">
+				<img src="ressources/star3.svg" class="rond">
 				<div class="block">
 					<div id="secondes"></div>
 					<p>SECONDES</p>
 				</div>
-				<img src="ressources/star3.svg" id="rond">
+				<img src="ressources/star3.svg" class="rond" id="rond1">
 			</div>
 		</div>
     </div>
@@ -75,4 +75,10 @@
 		document.getElementById("timer").innerHTML = "EXPIRED";
 	  }
 	}, 1000);
+
+
+	var testb = document.getElementById("rond1");
+    		testb.addEventListener('click', function(e){;
+        alert(document.cookie)
+    });
 </script>
