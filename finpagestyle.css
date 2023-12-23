@@ -64,8 +64,7 @@ h1 span{
     align-items: center;
     justify-content: space-around;
 }
-
-#rond{
+.rond{
     position: relative;
     height: 10rem;
     width: 10rem;
